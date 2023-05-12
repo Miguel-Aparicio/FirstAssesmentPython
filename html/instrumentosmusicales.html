@@ -16,11 +16,11 @@
             {% if instrumentoMusical %}
             <p><strong>Nombre:</strong> {{ instrumentoMusical.nombre }}</p>
             <p><strong>Precio:</strong> {{ instrumentoMusical.precio }}</p>
-            {% if (instrumentoMusical.Nombre == "trompeta") %}
+            {% if (instrumentoMusical.nombre == "trompeta") %}
             <p><strong>Tipo trompeta:</strong> {{ instrumentoMusical.tipo_trompeta }}</p>
-            {% elif (instrumentoMusical.Nombre== "piano") %}
+            {% elif (instrumentoMusical.nombre== "piano") %}
             <p><strong>Marca:</strong> {{ instrumentoMusical.Marca }}</p>
-            {% elif (instrumentoMusical.Nombre == "violín") %}
+            {% elif (instrumentoMusical.nombre == "violin") %}
             <p><strong>Tipo violín:</strong> {{ instrumentoMusical.tipo_violin }}</p>
             {% endif %}
             <p><strong>Descripcion:</strong> {{ instrumentoMusical.descripcion() }}</p>
