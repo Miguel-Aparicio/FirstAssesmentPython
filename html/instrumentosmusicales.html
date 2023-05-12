@@ -1,0 +1,36 @@
+<!--instrumentosmusicales.html-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Información de la instrumentoMusical</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+</head>
+
+<body>
+    <fieldset>
+        <legend>Información de instrumentosmusicales</legend>
+        <div class="form-group row">
+            {% if instrumentoMusical %}
+            <p><strong>Nombre:</strong> {{ instrumentoMusical.nombre }}</p>
+            <p><strong>Precio:</strong> {{ instrumentoMusical.precio }}</p>
+            {% if (instrumentoMusical.Nombre == "trompeta") %}
+            <p><strong>Tipo trompeta:</strong> {{ instrumentoMusical.tipo_trompeta }}</p>
+            {% elif (instrumentoMusical.Nombre== "piano") %}
+            <p><strong>Marca:</strong> {{ instrumentoMusical.Marca }}</p>
+            {% elif (instrumentoMusical.Nombre == "violín") %}
+            <p><strong>Tipo violín:</strong> {{ instrumentoMusical.tipo_violin }}</p>
+            {% endif %}
+            <p><strong>Descripcion:</strong> {{ instrumentoMusical.descripcion() }}</p>
+            {% else %}
+            <p>La instrumentoMusical seleccionada no fue encontrada en la lista.</p>
+            {% endif %}
+            <form method="get" action="/">
+                <button type="submit" class="btn btn-primary">Mas instrumentosmusicales</button>
+            </form>
+        </div>
+    </fieldset>
+</body>
+</html>

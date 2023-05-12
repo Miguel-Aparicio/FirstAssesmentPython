@@ -20,7 +20,7 @@ def mostrar_instrumentosmusicales():
  # Insertar el código aquí
         
  # Renderizar la página de instrumentos musicales con el instrumento musical seleccionado
-    return render_template("instrumentosmusicales.html", instrumentoMusical=instrumentoMusical_ingresado)
+    return render_template("instrumentosmusicales.html", instrumentoMusical=instrumentomusical_ingresado)
 
 
 if __name__ == '__main__':
