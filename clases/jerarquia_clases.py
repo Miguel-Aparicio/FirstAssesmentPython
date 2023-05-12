@@ -15,7 +15,8 @@ class Trompeta(InstrumentosMusicales):
         self.tipo_trompeta = tipo_trompeta
 
     def descripcion(self):
-        print(f"La trompeta {self.nombre} es del tipo {self.tipo_trompeta}. Su precio es {self.precio}.")
+        res = (f"La trompeta {self.nombre} es del tipo {self.tipo_trompeta}. Su precio es {self.precio}.")
+        return res
 
 class Piano(InstrumentosMusicales):
     def __init__(self, nombre, precio, marca):
@@ -23,7 +24,8 @@ class Piano(InstrumentosMusicales):
         self.marca = marca
 
     def descripcion(self):
-        print(f"El piano {self.nombre} es de la marca {self.marca}. Su precio es {self.precio}.")
+        res = (f"El piano {self.nombre} es de la marca {self.marca}. Su precio es {self.precio}.")
+        return res
 
 class Violin(InstrumentosMusicales):
     def __init__(self, nombre, precio, tipo_violin):
@@ -31,4 +33,5 @@ class Violin(InstrumentosMusicales):
         self.tipo_violin = tipo_violin
 
     def descripcion(self):
-        print(f"El violín {self.nombre} es del tipo {self.tipo_violin}. Su precio es {self.precio}.")
+        res = (f"El violín {self.nombre} es del tipo {self.tipo_violin}. Su precio es {self.precio}.")
+        return res

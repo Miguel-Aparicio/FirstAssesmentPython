@@ -1,5 +1,5 @@
+from clases import jerarquia_clases
 from flask import Flask,request
-from jerarquia_clases import InstrumentosMusicales
 
 app = Flask(__name__)
 
